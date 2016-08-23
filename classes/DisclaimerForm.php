@@ -21,6 +21,8 @@ class DisclaimerForm extends Form
 	protected $strMethod = 'POST';
 	
 	protected $objDisclaimer;
+
+	protected $isFilterForm = true;
 	
 	public function __construct($varConfig = null, $intId = 0)
 	{
