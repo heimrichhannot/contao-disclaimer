@@ -22,8 +22,6 @@ class DisclaimerForm extends Form
 	
 	protected $objDisclaimer;
 
-	protected $isFilterForm = true;
-	
 	public function __construct($varConfig = null, $intId = 0)
 	{
 		$varConfig = array_merge($varConfig, array
