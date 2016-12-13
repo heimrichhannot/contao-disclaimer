@@ -31,3 +31,4 @@ $GLOBALS['TL_PERMISSIONS'][] = 'disclaimerp';
  * Hooks
  */
 $GLOBALS['TL_HOOKS']['postDownload'][] = array('HeimrichHannot\Disclaimer\Hooks', 'postDownloadHook');
+$GLOBALS['TL_HOOKS']['generatePage'][] = array('HeimrichHannot\Disclaimer\Hooks', 'generatePageHook');
