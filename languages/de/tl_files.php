@@ -13,4 +13,7 @@ $arrLang = &$GLOBALS['TL_LANG']['tl_files'];
 /**
  * Fields
  */
-$arrLang['disclaimer'] = array('Haftungsausschluss hinzufügen' , 'Dem Nutzer einen Haftungsausschluss anzeigen, bevor der Download gestartet werden kann. (<span style="color: #c33; font-weight: bold;">Achtung: Verzeichnis muss "Geschütz" sein um direkte Dateiaufrufe zu unterbinden!</span>)');
+$arrLang['disclaimer'] = array(
+    'Haftungsausschluss hinzufügen',
+    'Dem Nutzer einen Haftungsausschluss anzeigen, bevor der Download gestartet werden kann. (<span style="color: #c33; font-weight: bold;">Achtung: Verzeichnis muss "Geschütz" sein um direkte Dateiaufrufe zu unterbinden!</span>)',
+);

@@ -11,6 +11,9 @@
 namespace HeimrichHannot\Disclaimer;
 
 
+use HeimrichHannot\Modal\Modal;
+use HeimrichHannot\Modal\ModalController;
+use HeimrichHannot\Modal\ModalModel;
 use HeimrichHannot\Request\Request;
 
 class Disclaimer
@@ -248,7 +251,7 @@ class Disclaimer
         switch ($objDisclaimer->source)
         {
             case 'page':
-                if (($objTarget = \PageModel::findPublishedById($objDisclaimer->jumpTo)) === null)
+                if (($objTarget = \PageModel::findPublishedById($objDisclaimer->jumpTo)) === null || $objTarget->id == $objPage->id)
                 {
                     break;
                 }
@@ -272,6 +275,25 @@ class Disclaimer
 
                     \Controller::redirect($strUrl);
                 }
+                break;
+            case 'modal' :
+                if (($objModalModel = ModalModel::findByPk($objDisclaimer->modal)) === null
+                    || ($objModal = new Modal($objModalModel, ModalController::getModalConfig($objModalModel))) === null
+                )
+                {
+                    break;
+                }
+
+                $strModalLink = '/' . $objPage->alias . '/' . $objModal->alias;
+
+                // check for async formhybrid call in case that the modal contains a form
+                if ($strUrl === $strModalLink || static::isFormHybridCall())
+                {
+                    return;
+                }
+
+                \Controller::redirect($strModalLink);
+
                 break;
         }
 
@@ -305,5 +327,24 @@ class Disclaimer
         }
 
         return $objDisclaimer->fetchEach('title');
+    }
+
+    /**
+     * Checks if the request is an ajax formhybrid call
+     *
+     * @return bool
+     */
+    protected static function isFormHybridCall()
+    {
+        if (\Input::get('as') === 'ajax'
+            && \Input::get('ag') === 'formhybrid'
+            && !empty(\Input::post('REQUEST_TOKEN'))
+            && !empty(\Input::post('FORM_SUBMIT'))
+        )
+        {
+            return true;
+        }
+
+        return false;
     }
 }

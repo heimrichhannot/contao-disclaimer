@@ -4,8 +4,8 @@
  * Back end modules
  */
 $GLOBALS['BE_MOD']['content']['disclaimer'] = array(
-	'tables' => array('tl_disclaimer_archive', 'tl_disclaimer'),
-	'icon'   => 'system/modules/disclaimer/assets/img/icon_disclaimer.png',
+    'tables' => array('tl_disclaimer_archive', 'tl_disclaimer'),
+    'icon'   => 'system/modules/disclaimer/assets/img/icon_disclaimer.png',
 );
 
 

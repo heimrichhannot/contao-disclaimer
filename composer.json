@@ -1,40 +1,48 @@
 {
-	"name": "heimrichhannot/contao-disclaimer",
-	"description":"Disclaimer brings a backend and frontend module to contao. If the user for example tries to download a file, he first has to accept a disclaimer.",
-	"keywords":["contao", "disclaimer", "download", "files", "modal"],
-	"type": "contao-module",
-	"homepage":"https://github.com/heimrichhannot/contao-disclaimer",
-	"license":"LGPL-3.0+",
-	"authors":[
-		{
-			"name":"Heimrich & Hannot",
-			"email":"digitales@heimrich-hannot.de",
-			"homepage":"http://www.heimrich-hannot.de",
-			"role":"Developer"
-		}
-	],
-	"support":{
-		"issues":"https://github.com/heimrichhannot/contao-disclaimer/issues"
-	},
-	"require": {
-		"contao/core": ">=3.4,<4-dev",
-		"contao-community-alliance/composer-installer": "*",
-		"heimrichhannot/contao-formhybrid": "~2.5",
-		"heimrichhannot/contao-ajax": "~1.0",
-		"heimrichhannot/contao-haste_plus": "~1.0",
-		"heimrichhannot/contao-request": "~1.0"
-	},
-	"suggest": {
-		"heimrichhannot/contao-modal": "Allows to display disclaimer within modal windows"
-	},
-	"autoload": {
-		"classmap": [""]
-	},
-	"extra": {
-		"contao": {
-			"sources": {
-				"": "system/modules/disclaimer"
-			}
-		}
-	}
+  "name": "heimrichhannot/contao-disclaimer",
+  "description": "Disclaimer brings a backend and frontend module to contao. If the user for example tries to download a file, he first has to accept a disclaimer.",
+  "keywords": [
+    "contao",
+    "disclaimer",
+    "download",
+    "files",
+    "modal"
+  ],
+  "type": "contao-module",
+  "homepage": "https://github.com/heimrichhannot/contao-disclaimer",
+  "license": "LGPL-3.0+",
+  "authors": [
+    {
+      "name": "Heimrich & Hannot",
+      "email": "digitales@heimrich-hannot.de",
+      "homepage": "http://www.heimrich-hannot.de",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/heimrichhannot/contao-disclaimer/issues"
+  },
+  "require": {
+    "contao/core": ">=3.4,<4-dev",
+    "contao-community-alliance/composer-installer": "*",
+    "heimrichhannot/contao-formhybrid": "~2.5",
+    "heimrichhannot/contao-ajax": "~1.0",
+    "heimrichhannot/contao-haste_plus": "~1.0",
+    "heimrichhannot/contao-request": "~1.0"
+  },
+  "suggest": {
+    "heimrichhannot/contao-modal": "Allows to display disclaimer within modal windows"
+  },
+  "autoload": {
+    "classmap": [
+      ""
+    ]
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "": "system/modules/disclaimer"
+      }
+    }
+  }
 }

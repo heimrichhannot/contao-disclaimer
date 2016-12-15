@@ -32,10 +32,7 @@ class Hooks
             return false;
         }
 
-        if ($objRootPage->showDisclaimer)
-        {
-            return Disclaimer::show($objDisclaimerArchive, 'ROOT_PAGE_DISCLAIMER_' . $objRootPage->pid);
-        }
+        return Disclaimer::show($objDisclaimerArchive, 'ROOT_PAGE_DISCLAIMER_' . $objRootPage->id);
     }
 
     public function postDownloadHook($strFile)

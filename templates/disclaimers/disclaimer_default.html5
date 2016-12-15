@@ -1,11 +1,11 @@
 <div class="<?= $this->class ?> block">
-	
-	<?php if ($this->headline): ?>
-		<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
-	<?php endif; ?>
 
-	<?= $this->text; ?>
+    <?php if ($this->headline): ?>
+    <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+<?php endif; ?>
 
-	<?= $this->form; ?>
+<?= $this->text; ?>
+
+<?= $this->form; ?>
 </div>
 
